@@ -10,5 +10,6 @@ https://www.kaggle.com/datasets/deepcontractor/aircraft-accidents-failures-hijac
 
 ### Tahapan Pembuatan Visualisasi
 #### Persiapan Dataset
-Dari dataset tersebut dilakukan processing untuk memilih data yang ingin ditampilkan. Berikut merupakan data yang ingin divisualisasikan
+Dari dataset tersebut dilakukan processing untuk memilih data yang ingin ditampilkan. Berikut merupakan data yang ingin divisualisasikan.<br>
+
 ![image](https://user-images.githubusercontent.com/54930670/162118955-b7dbf6b6-fb69-49ba-93d6-33e32f02cc3f.png)
