@@ -116,6 +116,77 @@ animation: {
            axis: 'x'
      }
 ```
+#### Memberikan nama y-axis dan x-axis
+```
+scales: {
+                    x: {
+                        display: true,
+                        title: {
+                            display: true,
+                            text: 'Tahun',
+                            font: {
+                                size: 18,
+                                weight: 'bold',
+                                lineHeight: 1.2
+                            },
+                            padding: {
+                                top: 20,
+                                left: 0,
+                                right: 0,
+                                bottom: 0
+                            }
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        type: 'linear',
+                        display: true,
+                        position: 'left',
+                        title: {
+                            display: true,
+                            text: 'Total Korban Jiwa',
+                            font: {
+                                size: 15,
+                                weight: 'bold',
+                                lineHeight: 1.2
+                            },
+                            padding: {
+                                top: 30,
+                                left: 0,
+                                right: 0,
+                                bottom: 0
+                            }
+                        }
+                    },
+                    y1: {
+                        beginAtZero: true,
+                        type: 'linear',
+                        position: 'right',
+                        display: true,
+                        title: {
+                            display: true,
+                            text: 'Total Kecelakaan',
+                            font: {
+                                size: 15,
+                                weight: 'bold',
+                                lineHeight: 1.2
+                            },
+                            padding: {
+                                top: 30,
+                                left: 0,
+                                right: 0,
+                                bottom: 0
+                            },
+                            grid: {
+                                drawOnChartArea: false, // only want the grid lines for one axis to show up
+                            }
+                        }
+                    },
+                }
+            }
+        };
+```
+
 
 
                     
