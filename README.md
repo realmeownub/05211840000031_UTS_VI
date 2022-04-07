@@ -22,19 +22,54 @@ langkah pertama yaitu membuat const data yang berisikan dataset yang digunakan.<
  const data = {
             labels: ['2011', '2012','2013','2014','2015','2016','2017','2018','2019','2020','2021'],
             datasets: [{
-                type: 'line',
+                type: 'bar',
                 label: 'Total Kecelakaan',
                 data: [187,169,208,225,220,205,192,224,237,180,148,],
-                borderColor: 'rgb(255, 99, 132)',
-                backgroundColor: 'rgba(255, 99, 132)'
-            }, {
-                type: 'bar',
-                label: 'Total Korban Jiwa',
-                data: [713,689,355,1219,840,567,317,963,471,430,330,],
                 fill: 50,
                 borderColor: 'rgb(153, 204, 255)',
-                backgroundColor: 'rgb(153, 204, 255)'
+                backgroundColor: 'rgb(153, 204, 255)',
+                yAxisID: 'y'
+            }, {
+                type: 'line',
+                label: 'Total Korban Jiwa',
+                data: [713,689,355,1219,840,567,317,963,471,430,330,],
+                borderColor: 'rgb(255, 99, 132)',
+                backgroundColor: 'rgba(255, 99, 132)',
+                yAxisID: 'y1'
             }]
         };
 ```
+untuk data total kecelakaan diset `type : bar` dan untuk total korban jiwa diset `type: line`
+
+#### 2. Melakukan Konfigurasi Charts <br>
+```
+const config = {
+            data: data,
+            options: {
+            }
+}
+```
+Langkah selanjutnya adalah membuat tampilan charts lebih interaktif <br>
+###### Memberikan Title
+Di dalam `options` tambahkan `plugins` array <br>
+```
+                 plugins: {
+                    responsive: true,
+                    // untuk title
+                    title: {
+                        display: true,
+                        text: 'Kecelakaan Pesawat Selama Tahun 2011 -2021',
+                        font: {
+                            size: 25,
+                            weight: 'bold'
+                        },
+                        padding: {
+                            top: 10,
+                            bottom: 30
+                        }
+                    },
+```
+                    
+
+
 
