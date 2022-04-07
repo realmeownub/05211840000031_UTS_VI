@@ -16,7 +16,8 @@ Dari dataset tersebut dilakukan processing untuk memilih data yang ingin ditampi
 ![image](https://user-images.githubusercontent.com/54930670/162118955-b7dbf6b6-fb69-49ba-93d6-33e32f02cc3f.png)
 <br>
 
-#### Konfigurasi Data
+####1. Melakukan Konfigurasi Data <br>
+langkah pertama yaitu membuat const data yang berisikan dataset yang digunakan.<br>
 ```
  const data = {
             labels: ['2011', '2012','2013','2014','2015','2016','2017','2018','2019','2020','2021'],
