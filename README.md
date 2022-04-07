@@ -16,7 +16,7 @@ Dari dataset tersebut dilakukan processing untuk memilih data yang ingin ditampi
 ![image](https://user-images.githubusercontent.com/54930670/162118955-b7dbf6b6-fb69-49ba-93d6-33e32f02cc3f.png)
 <br>
 
-####1. Melakukan Konfigurasi Data <br>
+#### 1. Melakukan Konfigurasi Data <br>
 langkah pertama yaitu membuat const data yang berisikan dataset yang digunakan.<br>
 ```
  const data = {
