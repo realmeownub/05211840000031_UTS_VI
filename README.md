@@ -15,6 +15,33 @@ https://www.kaggle.com/datasets/deepcontractor/aircraft-accidents-failures-hijac
 Dari dataset tersebut dilakukan processing untuk memilih data yang ingin ditampilkan. Berikut merupakan data yang ingin divisualisasikan yaitu.<br>
 ![image](https://user-images.githubusercontent.com/54930670/162118955-b7dbf6b6-fb69-49ba-93d6-33e32f02cc3f.png)
 <br>
+### Persiapan Template HTML
+```
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <title>Floating Bars</title>
+</head>
+
+<body>
+  <div class="chart-container" style="position: relative; height:40vh; width:80vw; margin-left: 5vw;">
+    <canvas id="myChart"></canvas>
+  </div>
+  <script>
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+    );
+  </script>
+</body>
+
+</html>
+```
+
 
 #### 1. Melakukan Konfigurasi Data <br>
 langkah pertama yaitu membuat const data yang berisikan dataset yang digunakan.<br>
