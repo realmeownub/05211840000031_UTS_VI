@@ -50,7 +50,7 @@ const config = {
 }
 ```
 Langkah selanjutnya adalah membuat tampilan charts lebih interaktif <br>
-###### Memberikan Title
+##### Memberikan Title
 Di dalam `options` tambahkan `plugins` array <br>
 ```
                  plugins: {
@@ -69,6 +69,37 @@ Di dalam `options` tambahkan `plugins` array <br>
                         }
                     },
 ```
+##### Memberikan legend dengan posisi di atas chart
+Di dalam `plugins` tambahkan code berikut <br>
+```
+legend: {
+    display: true,
+    position: 'top',
+    }
+},
+```
+#### Memberikan animasi delay chart tampil di awal
+Di dalam `options` tambahkan `animation` array tapi sebelumnya menambakhan variable dengan nama `delayed` <br>
+```
+// variabel 
+        let delayed;
+        const config = {
+            data: data,
+```
+Kemudian menambahkan kode berikut
+```
+onComplete: () => {
+     delayed = true;
+},
+delay: (context) => {
+     let delay = 0;
+     if (context.type === 'data' && context.mode === 'default' && !delayed) {
+           delay = context.dataIndex * 300 + context.datasetIndex * 100;
+     }
+      return delay;
+}
+```
+
                     
 
 
