@@ -214,6 +214,10 @@ scales: {
         };
 ```
 
+## Berikut Hasilnya <br>
+![image](https://user-images.githubusercontent.com/54930670/162153905-efe4e576-196b-40fe-8441-3580f4b023f6.png)
+
+
 
 
                     
