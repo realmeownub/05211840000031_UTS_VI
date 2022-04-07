@@ -99,6 +99,24 @@ delay: (context) => {
       return delay;
 }
 ```
+#### Memberikan animasi Loop dan ubah warna ketika mouse dihover ke chart
+```
+animation: {
+    // untuk animasi loop
+    radius: {
+         duration: 400,
+         easing: 'linear',
+         loop: (context) => context.active
+    },
+    hoverRadius: 10,
+    hoverBackgroundColor: 'rgb(0, 128, 255)',
+    interaction: {
+          mode: 'nearest',
+          intersect: false,
+           axis: 'x'
+     }
+```
+
 
                     
 
