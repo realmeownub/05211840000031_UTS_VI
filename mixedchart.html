@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Mixed Chart</title>
+</head>
+
+<body>
+    <div class="chart-container" style="position: relative; height:40vh; width:80vw; margin-left: 5vw;">
+        <canvas id="myChart"></canvas>
+    </div>
+    <script>
+        const data = {
+            labels: [
+                '2011',
+                '2012',
+                '2013',
+                '2014',
+                '2015',
+                '2016',
+                '2017',
+                '2018',
+                '2019',
+                '2020',
+                '2021'
+
+            ],
+            datasets: [{
+                
+                type: 'line',
+                label: 'Total Korban Jiwa',
+                data: [
+                    713,
+                    689,
+                    355,
+                    1219,
+                    840,
+                    567,
+                    317,
+                    963,
+                    471,
+                    430,
+                    330,
+                ],
+                borderColor: 'rgb(255, 99, 132)',
+                backgroundColor: 'rgba(255, 99, 132)',
+                yAxisID: 'y'
+            }, {
+                type: 'bar',
+                label: 'Total Kecelakaan',
+                data: [
+                    187,
+                    169,
+                    208,
+                    225,
+                    220,
+                    205,
+                    192,
+                    224,
+                    237,
+                    180,
+                    148,
+                ],
+                fill: 50,
+                borderColor: 'rgb(153, 204, 255)',
+                backgroundColor: 'rgb(153, 204, 255)',
+                yAxisID: 'y1'
+            }]
+        };
+
+        // variabel 
+        let delayed;
+
+        const config = {
+            data: data,
+            options: {
+                plugins: {
+                    responsive: true,
+                    // untuk title
+                    title: {
+                        display: true,
+                        text: 'Kecelakaan Pesawat Selama Tahun 2011 -2021',
+                        font: {
+                            size: 25,
+                            weight: 'bold'
+                        },
+                        padding: {
+                            top: 10,
+                            bottom: 30
+                        }
+                    },
+                    // untuk legend
+                    legend: {
+                        display: true,
+                        position: 'top',
+
+                    }
+                },
+                // untuk animation
+                animation: {
+                    // untuk animasi loop
+                    radius: {
+                        duration: 400,
+                        easing: 'linear',
+                        loop: (context) => context.active
+                    },
+                    // untuk animasi delay
+                    onComplete: () => {
+                        delayed = true;
+                    },
+                    delay: (context) => {
+                        let delay = 0;
+                        if (context.type === 'data' && context.mode === 'default' && !delayed) {
+                            delay = context.dataIndex * 300 + context.datasetIndex * 100;
+                        }
+                        return delay;
+                    }
+                },
+                hoverRadius: 10,
+                hoverBackgroundColor: 'rgb(0, 128, 255)',
+                interaction: {
+                    mode: 'nearest',
+                    intersect: false,
+                    axis: 'x'
+                },
+                scales: {
+                    x: {
+                        display: true,
+                        title: {
+                            display: true,
+                            text: 'Tahun',
+                            font: {
+                                size: 18,
+                                weight: 'bold',
+                                lineHeight: 1.2
+                            },
+                            padding: {
+                                top: 20,
+                                left: 0,
+                                right: 0,
+                                bottom: 0
+                            }
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        type: 'linear',
+                        display: true,
+                        position: 'left',
+                        title: {
+                            display: true,
+                            text: 'Total Korban Jiwa',
+                            font: {
+                                size: 15,
+                                weight: 'bold',
+                                lineHeight: 1.2
+                            },
+                            padding: {
+                                top: 30,
+                                left: 0,
+                                right: 0,
+                                bottom: 0
+                            }
+                        }
+                    },
+                    y1: {
+                        beginAtZero: true,
+                        type: 'linear',
+                        position: 'right',
+                        display: true,
+                        title: {
+                            display: true,
+                            text: 'Total Kecelakaan',
+                            font: {
+                                size: 15,
+                                weight: 'bold',
+                                lineHeight: 1.2
+                            },
+                            padding: {
+                                top: 30,
+                                left: 0,
+                                right: 0,
+                                bottom: 0
+                            },
+                            grid: {
+                                drawOnChartArea: false, // only want the grid lines for one axis to show up
+                            }
+                        }
+                    },
+                }
+            }
+        };
+
+
+
+        const myChart = new Chart(
+            document.getElementById('myChart'),
+            config
+        );
+    </script>
+</body>
+
+</html>
