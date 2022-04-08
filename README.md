@@ -143,6 +143,7 @@ animation: {
            axis: 'x'
      }
 ```
+
 #### Memberikan nama y-axis dan x-axis
 ```
 scales: {
