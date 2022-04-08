@@ -2,7 +2,7 @@
 
 
 ## General Info
-Halo! Saya Reyhan Venyutzky nrp 05211840000031. Project ini merupakan tugas UTS kelas Visualisasi Informasi ITS. Inti dari project ini berhasil membuat visualisasi dari data menggunakan chart.js
+Halo! Saya Reyhan Venyutzky nrp 05211840000031. Project ini merupakan tugas UTS kelas Visualisasi Informasi ITS. Inti dari project ini berhasil membuat visualisasi dari data menggunakan chart.js. Untuk pembagian chart, saya seharusnya membuat `floating bars` tapi setelah melakukan processing dataset, `mixed chart` lebih tepat untuk digunakan.
 
 ### Dataset
 Dataset yang digunakan adalah data berisi kecelakaan pesawat dan dataset berasal dari website kaggle dengan link berikut <br>
